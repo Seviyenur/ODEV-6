@@ -1,24 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
-/*=================== BASE ===================*/
-:root {
-  --dark-gray: #2f2f2f;
-  --light-gray: #6a6a6a;
-  --blue: #2f4d76;
-  --yellow: #FFD700;
-  --box-bgcolor: #70817b22;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
-body {
-  font-family: "Inter", serif;
-  background-color: #EFF2F1;
-  color: var(--light-gray);
+header {
+  position: fixed;
+  width: 100%;
+  background-color: darkslateblue;
+  height: 50px;
+  display: flex;
+}
+
+.Baslik {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 5px;
+  margin-left: 80px;
 }
 
 ul {
@@ -26,12 +27,125 @@ ul {
 }
 
 a {
-  color: #ffffff;
   text-decoration: none;
+  color: white;
 }
 
-/*=================== NAV ===================*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-/*=================== MAIN ===================*/
+.nav_list {
+  display: flex;
+  gap: 80px;
+  margin-left: 400px;
+}
 
-/*=================== RESPONSIVE DESIGN ===================*/
+.home-section {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  padding-top: 130px;
+}
+
+.home.box {
+  text-align: center;
+}
+
+.heading {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.explanation {
+  opacity: 0.7;
+}
+
+.furniture {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  gap: 80px;
+  position: relative;
+
+  p {
+    text-align: center;
+  }
+  .price {
+    font-weight: 700;
+  }
+  img {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.4s;
+  }
+}
+
+.message {
+  font-family: Merienda;
+}
+
+.add-button {
+  margin-top: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 130px;
+  justify-content: center;
+  padding: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 3px 4px 8px rgb(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.chair:hover .add-button {
+  opacity: 1;
+}
+
+.chair .add-button:hover {
+  transform: scale(1.1);
+}
+
+.sayac {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: gold;
+  cursor: pointer;
+  margin-left: -3px;
+  font-size: 15px;
+}
+
+.chair{
+  transition: transform 0.3 ease;
+}
+
+.chair:hover{
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 1150px) {
+  .furniture {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 40px; 
+  }
+
+  .chair {
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    padding-block: 0;
+    box-shadow: none;
+  }
+}
